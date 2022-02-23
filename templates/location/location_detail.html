@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+
+<link href="{% static 'css/tables.css' %}" rel="stylesheet"/>
+
+
+
+<img src="{% static 'images/home1.jpg'%}" alt="" class="home__img">
+
+<div class="test">
+    <span class="result">"{{area}}" 검색결과</span>
+    <a href="{% url 'main:location' %}" class="button"><i class="fas fa-undo"></i> 뒤로가기</a>
+    <div class="box2">
+        {% if camping_list %} 
+        <table border="1" width="100%" height="60px;">
+            <th>Name</th>
+            <th>Address</th>
+            {% for camping in camping_list %}
+                <tr>
+                    <td>
+                        <a href="{% url 'main:camping_detail' area camping.id %}">{{ camping.name }}</a>
+                        <td>
+                        {{ camping.location }}
+                        </td>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        {% else %}
+        <table border="1" width="100%" height="60px;">
+            <tr>
+                <td>
+                    "{{area}}" 검색 결과가 없습니다.
+                </td>
+            </tr>
+        </table>
+        {% endif %}
+
+    </div>
+
+    <div class=page>
+        <ul class="pagination">
+            {% if camping_list.has_previous %}
+            <li class = "page-item">
+                <a class="page-link" href="?page=1"><img src="{% static 'images/btn_pre00.png'%}"></a>
+            </li>
+            <li class = "page-item">
+                <a class="page-link" href="?page={{ camping_list.previous_page_number }}"><img src="{% static 'images/btn_pre01.png'%}"></a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="{% static 'images/btn_pre00.png'%}"></a>
+            </li>
+            <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="{% static 'images/btn_pre01.png'%}"></a>
+            </li>
+            {% endif %}
+            {% for page_number in camping_list.paginator.page_range %}
+            {% if page_number >= camping_list.number|add:-5 and page_number <= camping_list.number|add:5 %}
+                {% if page_number == camping_list.number %}
+                <li class="page-item-num active" aria-current="page">
+                    <a class="page-link" href="?page={{page_number}}">{{page_number}}</a>
+                </li>
+                {% else %}
+                <li class="page-item-num">
+                    <a class="page-link" href="?page={{page_number}}">{{page_number}}</a>
+                </li>
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+        
+            {% if camping_list.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{camping_list.next_page_number}}"><img src="{% static 'images/btn_next01.png'%}"></a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page={{camping_list.paginator.num_pages}}"><img src="{% static 'images/btn_next00.png'%}"></a>
+            </li>
+            {% else %}
+            <li class = "page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="{% static 'images/btn_next01.png'%}"></a>
+            </li>
+            <li class = "page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="{% static 'images/btn_next00.png'%}"></a>
+            </li>
+            {% endif %}
+        </ul>
+        </div>
+</div>
+
+{% endblock %}
+
+

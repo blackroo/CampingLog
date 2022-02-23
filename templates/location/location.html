@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+<link href="{% static 'css/table.css' %}" rel="stylesheet"/>
+{% comment %} <link href="{% static 'css/styles.css'%}" rel="stylesheet" /> {% endcomment %}
+
+<img src="{% static 'images/home1.jpg'%}" alt="" class="home__img">
+
+   <div class="search">
+
+         <form action= "{% url 'main:search' %}" method="post">
+         {% csrf_token %}
+            <input type="radio" name="radioTxt" value="name" checked="checked"> <span class="search-switch">캠핑장이름으로 검색</span>
+            <input  type="radio" name="radioTxt" value="address"> <span class="search-switch">지역으로 검색</span>
+            <input  type="radio" name="radioTxt" value="facilities"> <span class="search-switch">편의시설로 검색</span><br>
+            <input class="search-text" type="text" class="form-control search" name="search">
+            <input type="submit" class="search-button" type="button" id="btn_search" value = "찾기">
+         </form>
+
+   </div>
+
+
+
+   <div class="box1">
+      <div class="location">
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '서울특별시' %}">서울특별시</a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="first_list">
+               <a href="{% url 'main:location_detail' '경기도' %}">경기도</a>
+               <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '파주시' %}">파주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '포천시' %}">포천시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '용인시' %}">용인시</a>
+               </li>
+
+               <li>
+                  <a href="{% url 'main:location_detail' '시흥시' %}">시흥시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '수원시' %}">수원시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '광명시' %}">광명시</a>
+               </li>
+
+               <li>
+                  <a href="{% url 'main:location_detail' '구리시' %}">구리시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '화성시' %}">화성시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '여주시' %}">여주시</a>
+               </li>
+
+               <li>
+                  <a href="{% url 'main:location_detail' '양주시' %}">양주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '김포시' %}">김포시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '동두천시' %}">동두천시</a>
+               </li>
+
+               <li>
+                  <a href="{% url 'main:location_detail' '군포시' %}">군포시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '의정부시' %}">의정부시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '고양시' %}">고양시</a>
+               </li>
+
+               <li>
+                  <a href="{% url 'main:location_detail' '오산시' %}">오산시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '안양시' %}">안양시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '의왕시' %}">의왕시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '가평군' %}">가평군</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '양평군' %}">양평군</a>
+               </li>
+            </ul>
+         </li>
+
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '강원도' %}">강원도</a>
+            <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '춘천시' %}">춘천시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '원주시' %}">원주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '삼척시' %}">삼척시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '강릉시' %}">강릉시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '동해시' %}">동해시</a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '충청북도' %}">충청북도</a>
+               <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '청주시' %}">청주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '충주시' %}">충주시</a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '충청남도' %}">충청남도</a>
+               <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '논산시' %}">논산시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '서산시' %}">서산시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '아산시' %}">아산시</a>
+               </li>
+
+               <li>
+                  <a href="{% url 'main:location_detail' '공주시' %}">공주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '천안시' %}">천안시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '당진시' %}">당진시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '보령시' %}">보령시</a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '전라북도' %}">전라북도</a>
+               <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '군산시' %}">군산시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '남원시' %}">남원시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '정읍시' %}">정읍시</a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '전라남도' %}">전라남도</a>
+            <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '광주광역시' %}">광주광역시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '나주시' %}">나주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '순천시' %}">순천시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '광양시' %}">광양시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '여수시' %}">여수시</a>
+               </li>
+            </ul>
+         </li>
+
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '경상북도' %}">경상북도</a>
+            <ul>
+         </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '대구광역시' %}">대구광역시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '김천시' %}">김천시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '영천시' %}">영천시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '경주시' %}">경주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '상주시' %}">상주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '구미시' %}">구미시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '영주시' %}">영주시</a>
+               </li>
+            </ul>
+         </li>
+
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '경상남도' %}">경상남도</a>
+            <ul>
+         </li>
+         <li>
+                  <a href="{% url 'main:location_detail' '부산광역시' %}">부산광역시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '창원시' %}">창원시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '밀양시' %}">밀양시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '통영시' %}">통영시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '거제시' %}">거제시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '사천시' %}">사천시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '진주시' %}">진주시</a>
+               </li>
+               <li>
+                  <a href="{% url 'main:location_detail' '양산시' %}">양산시</a>
+               </li>
+            </ul>
+         </li>
+
+
+         <li class="first_list">
+            <a href="{% url 'main:location_detail' '제주특별자치도' %}">제주특별자치도</a>
+            <ul>
+         </li>
+      </div>
+   </div>
+
+{% endblock %}
+

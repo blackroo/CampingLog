@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: 'title';
+    src: url('../font/NanumPenScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('../font/GamjaFlower-Regular.ttf') format('truetype');
+}
+  body {
+    margin: 0;
+    min-width: 992px;
+    font-family: "Helvetica";
+  }
+  
+  .navbar{
+    height: 80px;
+    /* padding-left: 30px; */
+  }
+  
+  .logo{
+    /* line-height: 60px; */
+    float: left;
+    position: relative;
+  }
+  
+  .logo img{
+    vertical-align: middle;
+  }
+  
+  .navbar ul{
+    float: right;
+    
+  }
+  
+  .navbar li{
+    list-style-type: none;
+    float: left;
+    margin-right: 30px;
+  }
+  
+  .navbar a{
+    position: relative;
+    text-decoration: none;
+    color : white;
+    font-style: bold;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .logo_name{
+    font-size: 45px;
+  }
+  
+  .hero_header{
+    height: 1000px;
+    width: 100%;
+  }
+  
+  body h1{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 24px;
+    font-style: bold;
+    color: #545454;
+  }
+  
+  .products {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 740px;
+    text-align: center;
+  }
+  
+  .products img{
+    width: 225px;
+    height: 225px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .products a{
+    text-decoration: none;
+    color: black;
+    float: left;
+    font-size: 16px;
+  }
+  
+  .price{
+    margin-top: 4px;
+    margin-bottom: 80px;
+  }
+  
+  .clearfix{
+    clear: both;
+  }
+  
+  .footer{
+    text-align: center;
+  }
+  
+  .footer img{
+    margin-top: 40px;
+    height: 20px;
+    margin-bottom: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .home,.navbar{
+    font-family: 'text';
+  }
+
+  .home__img {
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    /* height: 1126px; */
+    height: 1126px;
+    width: 100%;
+    min-width: 1700px;
+
+    overflow:hidden;
+    /* height: 100vh;
+    object-fit: cover;
+    object-position: 83%; */
+  }
+  
+  .home__container {
+    position: relative;
+    margin-left: 80px;
+    top : 200px;
+    /* font-weight: bold; */
+    line-height: 1;
+    animation-name: grow;
+    animation-duration: 1s;/* 애니메이션 시간 */
+  }
+
+  @keyframes grow {
+    from { transform: translateY(10em) }/* 애니메이션 높이 */
+    to { transform: translateY(0) }
+  }
+
+  .home_main_title{
+    font-size : 100px;
+    color : white;
+    font-family: 'title';
+
+  }
+
+  .home_main_data{
+    font-size : 30px;
+    color : white;
+  }
+
+  .button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    background-color: lightblue;
+    color:black;
+    padding: 1rem 2rem;
+    font-weight: 900;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  .button:hover {
+    background-color: white;
+    color:black;
+  }
+  .top__img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0%;
+  }
+
+  .nav__img{
+    position: absolute;
+    left: 0;
+    height: 130px;
+    width: 100%;
+    min-width: 1700px;
+    overflow:hidden;
+  }
+  .nav{
+    right:0;
+  }
+  .nav:hover{
+    color : black;
+    background-color: white;
+    padding: 1px 10px;
+    border-radius: 20px;
+  }
+
+.camping_img{
+  position: absolute;    /*절대값으로 위치를 설정*/
+  left: 1000px;    /* x축 */
+  top: 10px;    /* y축 (작성하지 않는다면 원래의 위치로 설정됨 */
+  box-shadow: 5px 5px 10px 0px gray;
+}
+.slide1{
+  width: 600px;
+}
+
+.login{
+  margin-top: 50px;
+}
+
+.login{
+  font-family: 'text';
+  font-size: 20px;
+  font-weight: 600;
+}
+.login button,.join{
+  font-family: 'text';
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.join{
+  background-color: rgb(0, 119, 255);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+.join:hover{
+  color: white;
+}
+
+
+
+.login{ 
+  position: relative;
+}
+
+.signup{ 
+  position: relative;
+}
+
+.password_reset_form{ 
+  position: relative;
+}
+
+.password_reset_confirm{ 
+  position: relative;
+}
+
+.password_reset_done{ 
+  position: relative;
+}  
+.password_reset_complete{ 
+  position: relative;
+}  

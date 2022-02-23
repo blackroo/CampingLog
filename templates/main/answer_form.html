@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-3">
+    <form method="post" class="post-form">
+    {% csrf_token %}
+    {% include "form_errors.html" %}
+    <div class="form-group">
+        <br><br>
+        <h3><i class="fas fa-pencil-alt"></i> 댓글 수정하기 </h3>
+        
+        <textarea class="form-control" name="content" id="content" rows="8">{{ form.content.value|default_if_none:'' }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-bookmark"></i> 저장하기</button>
+        <a href = "javascript:history.back()" class="btn btn-primary"><i class="fas fa-undo"></i> 돌아가기</a>
+    </form>
+</div>
+{% endblock %}}

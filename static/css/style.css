@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
+
+textarea {
+  width: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+}
+
+button{
+  background-color: white;
+}
+
+.font-setting{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+

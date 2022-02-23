@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+{% load static %}
+    <link href="{% static 'css/styles.css'%}" rel="stylesheet" />
+    <script src="{% static 'js/move_image.js'%}"></script>
+
+    <!--맨위 사진-->
+    <section class="home" id="home">
+        <img src="{% static 'images/home1.jpg'%}" alt="" class="home__img">
+        
+        <div class="home__container">
+            
+            <span class="home_main_title">
+                당신의 캠핑장을 찾아보세요.
+            </span>
+
+            <span class="home_main_data">
+                <br>당신과 <br>가장 어울리는 <br>캠핑장을 찾아드립니다.<br>
+            </span>
+            <br>
+            <a href="{% url 'main:location' %}" class="button">검색</a>
+            <dev class="camping_img">
+                <img class="slide1" src="{% static 'images/camp2.jpg'%}" >
+                <img class="slide1" src="{% static 'images/camp5.jpeg'%}" >
+                <img class="slide1" src="{% static 'images/camp6.jpeg'%}" >
+            <dev>
+        </div>
+
+        
+    </section>
+
+{% endblock %}

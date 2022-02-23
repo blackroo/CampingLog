@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+{% load static %}
+<link href="{% static 'css/styles.css'%}" rel="stylesheet" />
+<div style="margin-top : 50px;margin-left:50px;font-size:30px">
+    아래 버튼을 누르면 다운로드가 진행됩니다.<br>
+    버튼을 누르면 데이터가 초기화 되고 다시 다운로드됩니다.</br>
+    페이지를 벗어나도 다운로드는 진행하나 되도록이면 벗어나지 말아주세요.<br>
+    다운 완료 시 자동으로 메인페이지로 이동합니다</br>
+    3~5분 정도 소요됩니다
+    <br><br>
+    관리자 이외에는 절대 누르지 마세요<br>
+    한번만 누르세요
+</div>
+<a href="{% url 'main:receive_data' %}" class="button" style="margin-left:50px;">데이터재시작</a>
+{% endblock %}

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
+	
+
+
+    .camp_intro{width:1510px; position:relative; overflow:hidden;}
+	.camp_intro > ul{display:inline-block; overflow:hidden; width:100%;}
+	.camp_intro > ul li.col_03{width: 32%; float:left;}
+	.camp_intro > ul li.img_box{height:235px; margin-left:2%; box-sizing: border-box; border:1px solid #dedede;}
+	.camp_intro > ul li.img_box:first-child{margin-left:0 !important;} 
+	.camp_intro .icon_ul02{margin:10px 0 10px 10px;}
+
+	.camp_intro_txt{width:100%; padding:20px 0; border-top:2px solid #000; border-bottom:1px solid #000; overflow:hidden; margin-top:20px; display:block; clear:both;}
+	.camp_intro_txt > span{font-size:14px; color:#000; display:block; line-height:25px;}
+	.camp_intro_txt > span.date_info{display:block; font-size:13px; color:#888; padding-top:10px;}
+	.camp_intro_txt > span.info_notice{font-size:13px; font-weight:bold;} 
+	.info_notice > span.info_f_red{color:red;}
+
+    
+
+
+    .board_w{width:90%; height:auto; overflow:hidden; border-top:2px solid #000; margin-top:10px;
+	min-width: 1200px;
+	max-width: 1500px;
+}
+
+ /*List*/
+ 
+ .board_w ul.bd_list{height:auto; overflow:hidden; width:100%; font-size:15px;}
+ .board_w ul.bd_list > li{width:100%; height:auto; overflow:hidden; padding:20px 0; clear:both; border-bottom:1px solid #dedede;}
+ .board_w ul.bd_list > li > a > ul > li{float:left; text-align:center; color:#4d4d4d;}
+ .board_w ul.bd_list > li > a > ul > li.num{width:7%;}
+ .board_w ul.bd_list > li > a > ul > li.con{width:8%;}
+ .board_w ul.bd_list > li > a > ul > li.con > span{width:85%; display:inline-block; height:28px; line-height:28px; font-size:13px; border-radius:5px;}
+	.board_w ul.bd_list > li > a > ul > li.con > span.event{background:#e5204a; color:#fff;  text-align:center;}
+	.board_w ul.bd_list > li > a > ul > li.con > span.event_off{background:#c4c4c4; color:#fff;  text-align:center;}
+	.board_w ul.bd_list > li > a > ul > li.con > span.notice{background:#4761a2; color:#fff;  text-align:center;}
+.board_w ul.bd_list > li > a > ul > li.title{width:72%; padding:0 1.5%;text-align:left; white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;}
+.board_w ul.bd_list > li > a > ul > li.date{float:right;}
+
+.paging_tm{display:none;}
+.paging{width:100%; clear:both; height:auto; margin-top:40px; overflow:hidden;}
+.paging ul{text-align:center;}
+.paging ul li{margin:0 2px;}
+.paging ul li a{width:32px; height:32px; display:block;}
+.paging ul li{display:inline-block;}
+.paging ul li img{vertical-align:middle;}
+.paging ul li.num{width:32px; height:32px; background:url("/img/2018/sub/btn_bg.png") no-repeat; text-align:center; font-size:14px; }
+.paging ul li.num.on{width:32px; height:32px; background:url("../images/btn_bg_on.png") no-repeat; text-align:center; font-size:14px; }
+.paging ul li.num.on a{color:#fff !important;}
+
+.btn_more_w{width:100%; display: block; text-align: center;  margin: 20px 0 0 0;}
+.btn_more_w > button.btn_black{padding:15px 20px; width:320px; box-sizing: border-box; font-size:15px;}
+.btn_more_w > button.btn_white{padding:15px 20px; width:320px; box-sizing: border-box; font-size:15px;}
+
+
+
+#section1{
+  margin-top: 35px;
+
+}
+#section1,.camp_intro,.camping_bigname1,.page{
+font-family: 'Nanum Gothic', sans-serif;
+left:200px;
+}
+
+
+
+.camping_bigname,.camping_bigname1{
+	font-size: 35px;
+	position: relative;
+}
+
+
+.camping_bigname1
+{
+	  width: 1510px;
+    padding: 15px 0;
+}
+
+.camping_bigname1 .camping_name{
+  position: relative;
+}
+
+.map{
+  width: 500px;
+  height: 1px;
+  margin-left: 200px;
+}
+
+.cont_tb{
+  position: relative;
+  margin-left: 710px;
+  width: 1000px;
+  padding: 20px;
+  height: 700px;
+}
+
+.home__img2 {
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    height: 1500px;
+    width: 100%;
+    min-width: 1700px;
+    overflow:hidden;
+  }
+
+  .cont_tb,.camping_bigname1,.camp_intro{
+	background-color:  rgb(242, 240, 229);
+	padding-left: 20px;
+  }
+.cont_tb .table th,.cont_tb .table tr{
+	border-top: 2px solid black;
+	
+}
+.camping_bigname1{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.page{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+.page{
+  position: relative;
+  width:1510px;
+  background-color: rgb(242, 240, 229);
+}
+.pagination{
+  justify-content: center;
+}
+
+.page-item-num.active .page-link{
+  background-color: skyblue;
+  font-size: 25px;
+  color:white;
+}
+.page-item-num{
+  font-size: 25px;
+}
+
+.page-link,.page-item-num,.page-item.active{
+  background-color: rgb(242, 240, 229);
+}
+
+.page-item.disabled .page-link{
+  background-color: gainsboro;
+}
+
+
+.button_location {
+  border: none;
+  cursor: pointer;
+  background-color: lightblue;
+  color:black;
+  padding: 10px;
+  font-weight: 900;
+  transition: 0.3s;
+  border-radius: 5px;
+  font-size: 12px;
+  float : right;
+  margin-right: 20px;
+  margin-top:10px;
+}
+
+.button_location:hover {
+  background-color: white;
+  color:black;
+}

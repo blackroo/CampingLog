@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
+
+@font-face {
+  font-family: 'text';
+  src: url('../font/GamjaFlower-Regular.ttf') format('truetype');
+}
+
+  .location{
+    position: absolute; 
+    left: 20%; 
+    top: 200px;
+    /* width: 220px; */
+    height: auto;
+    min-width: 1200px;
+    overflow : hidden;
+    /* white-space: nowrap;
+    overflow: auto; */
+    /* background-color: rgb(242, 240, 229); */
+    }
+
+  
+
+
+  .location li a:hover, .location ul li:hover a{
+    background: rgb(197, 196, 196);
+    color:#FFFFFF;
+    text-decoration:none;
+    background-color: black;
+    padding: 8px 10px;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+    }
+
+  .location li ul{
+    display:none;
+    }
+
+  .location li:hover ul{
+    display:block;
+    }
+
+    
+    .first_list {
+        font-size: 20px;
+        line-height: 2em;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: bold;
+        list-style: none;
+        text-align: center;
+        float: left;
+        margin: 10px;
+        padding-right: 0px;
+        border: 2px solid rgb(242, 240, 229);
+        border-radius:20px;
+        overflow:hidden;
+        background-color: rgb(242, 240, 229);
+     }
+    
+     .first_list ul{
+        list-style-type: circle;
+        border-radius: value;
+        font-family: 'Nanum Gothic', sans-serif;
+        margin: 0;
+        padding: 0;
+        border-radius:3px;
+        border: 2px solid rgb(242, 240, 229);
+        transition-duration: 0.3s;
+      }
+
+    .box2{
+      list-style: none;
+      color:aqua;
+    }
+
+    a {
+      color: black;
+      padding: 4px 3px;    
+    }
+
+    .home__img {
+      position: absolute;
+      left: 0;
+      margin-top:25px;
+      /* height: 1126px; */
+      height: 1126px;
+      width: 100%;
+      min-width: 1700px;
+  
+      overflow:hidden;
+      /* height: 100vh;
+      object-fit: cover;
+      object-position: 83%; */
+    }
+
+
+    .navbar{
+      font-family: 'text';
+    }
+
+    .search{
+      position: relative;
+      left:30%;
+      top: 20px;
+      display: inline;
+
+    }
+    .search-switch{
+      font-size: 20px;
+      font-family: 'Nanum Gothic', sans-serif;
+      font-weight: bold;
+    }
+    .search-text{
+      width: 400px;
+    }
+    .search-button{
+      background-color: skyblue;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+
+
+    .value{
+      position: relative;
+      width: 400px;
+      height: 200px;
+      background-color: rgb(242, 240, 229);
+      left: 40%;
+      top: 200px;
+      font-family: 'Nanum Gothic', sans-serif;
+      font-size: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      font-weight: 20px;
+      border-radius: 20px;
+    }
+
+    .value a{
+      background-color: skyblue;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    
+    .value-button{
+      margin-top: 10px;
+    }

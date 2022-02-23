@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous"
+    />
+
+    <div class="container my-3">
+        <div class="font-setting">
+        {% if messages %}
+        <br>
+        <!--사용자 오류 표시-->
+        <div class="alert alert-danger my-3" role="alert">
+            {% for message in messages %}
+                <strong>{{ message.tags }}</strong>
+                <ul><li>{{ message.message }}</li></ul>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+
+
+    <br><br>
+
+    <h2 class="border-bottom"><i class="fas fa-search"></i> 후기 글</h2>
+    <br>
+    <h2 class="border-bottom py-2">{{ comment.subject }}</h2>
+    <div class="row my-3">
+        <div class="col-1"> <!-- 추천영역 -->
+            <div class="bg-light text-center p-3 border font-weight-bolder mb-1">
+                {{comment.voter.count}}</div>
+                <a href="{% url 'main:vote_comment' area comment.id %}" data-uri="{% url 'main:vote_comment' area comment.id %}" class="recommend btn btn-sm btn-secondary btn-block my-1">추천</a>
+            </div>  
+    <div class="col-11">
+    <div class="card">
+        <div class="card-body">
+        <div class="card-text" style="white-space: pre-line">{{ comment.content }}</div>
+        <div class="d-flex justify-content-end">
+        {% if request.user == comment.author %}
+        <div class="my-3">
+            <a href="{% url 'main:comment_modify' area comment.id %}" class="btn btn-sm btn-outline-secondary">수정</a>
+            <a href="{% url 'main:comment_delete' area comment.id %}" class="delete btn btn-sm btn-outline-danger" data-uri="{% url 'main:comment_delete' area comment.id %}">삭제</a>
+        </div>
+        {% endif %}
+    </div></div></div>
+    <br>
+    <div class="badge badge-light p-2 text-left float-right">
+        <div class="mb-2">작성자 : {{comment.author.username}}</div>
+        <div><i class="fas fa-clock"></i> {{ comment.create_date | date:'Y-m-d H:i:s'}}</div>
+    </div>
+    <a href = "{% url 'main:camping_detail' area number %}" class="btn btn-primary"><i class="fas fa-list"></i> 목록보기</a>
+
+</div></div>
+
+    {% include 'main/answer_list.html' %}
+    <form action="{% url 'main:answer_create' area comment.id %}" method="post">
+        {% csrf_token %}
+        <textarea {% if not user.is_authenticated %} disabled {% endif %} name="content" id="content" rows="5"></textarea>
+        <input type="submit" value="답변등록"class="btn btn-primary">
+    </form>
+
+</div>
+{% endblock content %}
+
+{% block script %}
+<script type='text/javascript'>
+$(document).ready(function(){
+    $(".delete").on('click', function() {
+        if(confirm("정말로 글을 삭제하시겠습니까?")) {
+            location.href = $(this).data('uri');
+        }
+    });
+
+    $(".recommend").on('click', function() {
+        if(confirm("정말로 추천하시겠습니까?")) {
+        location.href = $(this).data('uri');
+        }
+    });
+});
+</script>
+{% endblock %}

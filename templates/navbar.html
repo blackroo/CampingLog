@@ -1,0 +1,20 @@
+{% load static %}
+<link href="{% static 'css/styles.css'%}" rel="stylesheet" />
+  <div class="navbar border-bottom">
+    <img src="{% static 'images/home2.jpg'%}" alt="" class="nav__img">
+    <a class="logo" href="{% url 'main:index' %}">
+      <img src="{% static 'images/logo.png' %}" height="80px">
+      <span class="logo_name">Camping Log</span>
+    </a>
+    <ul>
+      <li  class = "nav-item">
+        {% if user.is_authenticated %}
+        <a class="nav" href="{% url 'common:logout' %}">
+          {{ user.username }} (로그아웃)</a>
+        {% else %}
+        <li><a class="nav" href="{% url 'common:login' %}">로그인</a></li>
+        {% endif %}
+
+     
+    </ul>
+  </div>

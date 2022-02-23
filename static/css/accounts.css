@@ -1,0 +1,57 @@
+.login{
+    position: absolute; 
+    left: 600px; 
+    top: 100px;
+    width: 500px;
+    height: auto;
+    max-height: 1000px;
+    overflow : hidden;
+    padding: 20px;
+    background-color: rgb(242, 240, 229);
+    }
+
+
+.signup{
+    position: absolute; 
+    left: 600px; 
+    top: 150px;
+    width: 500px;
+    height: auto;
+    max-height: 1000px;
+    overflow : hidden;
+    padding: 20px;
+    background-color: rgb(242, 240, 229);
+    }
+.password_reset_form{
+    position: absolute; 
+    left: 600px; 
+    top: 150px;
+    width: 500px;
+    height: auto;
+    max-height: 1000px;
+    overflow : hidden;
+    padding: 20px;
+    background-color: rgb(242, 240, 229);
+    }
+.password_reset_complete{
+    position: absolute; 
+    left: 600px; 
+    top: 150px;
+    width: 500px;
+    height: auto;
+    max-height: 1000px;
+    overflow : hidden;
+    padding: 20px;
+    background-color: rgb(242, 240, 229);
+    }
+.password_reset_done{
+    position: absolute; 
+    left: 600px; 
+    top: 150px;
+    width: 500px;
+    height: auto;
+    max-height: 1000px;
+    overflow : hidden;
+    padding: 20px;
+    background-color: rgb(242, 240, 229);
+    }
